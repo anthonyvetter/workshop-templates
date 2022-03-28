@@ -1,0 +1,15 @@
+apiVersion: training.eduk8s.io/v1alpha1
+kind: TrainingPortal
+metadata:
+  name: workshop-templates
+spec:
+  portal:
+    registration:
+      type: anonymous
+    updates:
+      workshop: true
+  workshops:
+  - name: workshop-templates
+    capacity: 1
+    expires: 60m
+    orphaned: 5m

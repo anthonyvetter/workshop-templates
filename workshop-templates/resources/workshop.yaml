@@ -1,0 +1,20 @@
+apiVersion: training.eduk8s.io/v1alpha2
+kind: Workshop
+metadata:
+  name: workshop-templates
+spec:
+  title: workshop-templates
+  description: ""
+  content:
+    files: imgpkg+http://registry.eduk8s.svc.cluster.local:5001/workshop-templates-files:latest
+  session:
+    namespaces:
+      budget: medium
+    applications:
+      terminal:
+        enabled: true
+        layout: split
+      console:
+        enabled: true
+      editor:
+        enabled: true
